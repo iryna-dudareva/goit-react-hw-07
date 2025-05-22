@@ -4,7 +4,7 @@ import ContactForm from './components/ContactForm/ContactForm'
 import SearchBox from './components/SearchBox/SearchBox'
 import Contactlist from './components/Contactlist/Contactlist'
 import { useDispatch, useSelector } from 'react-redux'
-import { getContacts } from './redux/operations'
+import { getContacts } from './redux/contactsOps'
 import { selectLoading, selectError } from './redux/contactsSlice'
 
 
