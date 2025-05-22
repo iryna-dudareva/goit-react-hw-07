@@ -3,13 +3,14 @@ import css from './ContactForm.module.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { useDispatch, useSelector } from 'react-redux'
-import { addContact } from '../../redux/contactsSlice'
+import { addContact } from '../../redux/operations'
+import { selectContacts } from '../../redux/contactsSlice'
 
 
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector(selectContacts);
   const initialValues = {
     name: '',
     number: '',
